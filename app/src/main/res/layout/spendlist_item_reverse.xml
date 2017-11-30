@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingLeft="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <RelativeLayout
+        android:id="@+id/box"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/timeline_content_reverse"
+        android:paddingBottom="10dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/spendImage">
+
+        <ImageView
+            android:id="@+id/categoryIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/bg_green_circle_smic" />
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/categoryIcon"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="7"
+            android:singleLine="false"
+            android:text="My money"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/amountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/categoryIcon"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/categoryText"
+            android:layout_toStartOf="@+id/categoryIcon"
+            android:gravity="center"
+            android:text="00.00$" />
+
+        <ImageView
+            android:id="@+id/shared"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/shared"
+            android:layout_alignBottom="@+id/categoryIcon"
+            android:layout_toStartOf="@+id/amountText"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/spendImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/a330"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/box"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016/02/13 "
+        android:textSize="12dp"
+        android:layout_below="@+id/box"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="me"
+        android:id="@+id/usernameText"
+        android:layout_alignTop="@+id/timestamp"
+        android:layout_alignEnd="@+id/spendImage"
+        android:layout_toEndOf="@+id/box" />
+
+</RelativeLayout>

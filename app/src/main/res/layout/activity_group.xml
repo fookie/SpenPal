@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupActicity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:layout_above="@+id/groupDivider1"
+        android:layout_alignParentTop="true">
+
+        <ListView
+            android:id="@+id/groupMemberList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/groupDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_centerInParent="true"
+        android:background="@color/actionsheet_gray"
+        android:orientation="vertical" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/groupAddingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/add" />
+
+    <ListView
+        android:id="@+id/groupSpendingList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/groupDivider1"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

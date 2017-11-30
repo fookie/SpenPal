@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingRight="8dp">
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image"
+        android:layout_toStartOf="@+id/image"
+        android:text="2016/02/13 "
+        android:textSize="12dp" />
+
+    <RelativeLayout
+        android:id="@+id/box"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/image"
+        android:layout_toRightOf="@+id/image"
+        android:background="@drawable/timeline_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="1dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/categoryIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/bg_green_circle_smic" />
+
+        <TextView
+            android:id="@+id/categoryText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/categoryIcon"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxEms="7"
+            android:singleLine="false"
+            android:text="My money"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/amountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/categoryIcon"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/categoryText"
+            android:layout_toEndOf="@+id/categoryIcon"
+            android:gravity="center"
+            android:text="00.00$" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_2"
+        android:layout_width="1dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:background="#A6A6A6"
+        android:layout_alignBottom="@+id/timelinePhotoView" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@+id/view_0"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/timeline_green" />
+
+    <View
+        android:id="@+id/view_0"
+        android:layout_width="1dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/view_2"
+        android:layout_alignParentTop="true"
+        android:background="#A6A6A6" />
+
+    <ImageView
+        android:id="@+id/spendImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/box"
+        android:layout_alignStart="@+id/timestamp"
+        android:layout_below="@+id/image"
+        android:layout_toStartOf="@+id/image"
+        android:src="@drawable/a330" />
+
+    <ImageButton
+        android:id="@+id/timelinePhotoView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_photo"
+        android:layout_below="@+id/box"
+        android:layout_toStartOf="@+id/timelineRecordView" />
+
+    <ImageButton
+        android:id="@+id/timelineRecordView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_record"
+        android:layout_below="@+id/box"
+        android:layout_alignEnd="@+id/box" />
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.evelin.spenpal.AASplitActivity"
+    tools:showIn="@layout/activity_aasplit">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/headView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/nogravatar2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Record your spending:"
+        android:id="@+id/textView3"
+        android:layout_alignTop="@+id/headView"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/headView"
+        android:textAlignment="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:ems="10"
+        android:id="@+id/moneyEditText"
+        android:layout_below="@+id/textView3"
+        android:layout_toEndOf="@+id/headView"
+        android:textAlignment="center"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="user1"
+        android:id="@+id/aasplit_username"
+        android:layout_below="@+id/headView"
+        android:layout_alignStart="@+id/headView"
+        android:layout_alignEnd="@+id/headView"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Your balance: 0.00$"
+        android:id="@+id/aasplit_balance"
+        android:layout_below="@+id/aasplit_username"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aaListView"
+        android:layout_below="@+id/aasplit_balance"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit the group"
+        android:id="@+id/quitgroup"
+        android:layout_alignTop="@+id/headView"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/headView"
+        android:layout_above="@+id/aasplit_username" />
+</RelativeLayout>
